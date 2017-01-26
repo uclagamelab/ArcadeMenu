@@ -31,7 +31,11 @@ GameDataManager dataManager;
 Themes theme;
 Movie noVid;
 
-boolean sketchFullScreen() { return true; }
+void settings()
+{
+  fullScreen();
+}
+
 boolean gameIsRunning = false;
 
 void setup()
