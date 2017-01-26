@@ -50,7 +50,7 @@ void setup()
   savedTime = millis();
   
   logo = loadImage("logo.png");
-  noVid = new Movie(this, "default.mov");
+ // noVid = new Movie(this, "default.mov");
   dataManager = new GameDataManager(this);
   theme = new Themes();
   
