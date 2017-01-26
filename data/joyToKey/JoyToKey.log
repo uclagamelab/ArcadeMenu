@@ -1,0 +1,14 @@
+2017/01/20 12:36:23.837 Info   Starting JoyToKey Ver5.5.1
+2017/01/20 12:36:23.837 Info   ExeFile=C:\Users\arcadeMode\Documents\Processing\ArcadeMenu\data\joyToKey\JoyToKey.exe
+2017/01/20 12:36:23.837 Info   ConfigDir=C:\Users\arcadeMode\Documents\Processing\ArcadeMenu\data\joyToKey\
+2017/01/20 12:36:23.837 Info   IniFile=C:\Users\arcadeMode\Documents\Processing\ArcadeMenu\data\joyToKey\JoyToKey.ini
+2017/01/20 12:36:23.837 Info   Windows Version = 6.1
+2017/01/20 12:36:23.859 Info   Loaded VistaAPI.dll (Utils\Utils.cpp#199)
+2017/01/20 12:36:23.862 Info   LicenseKey "" is not valid
+2017/01/20 12:36:23.989 Info   0 joysticks are detected (Joystick.cpp#110)
+2017/01/20 12:36:23.989 Info   ConfigDir=C:\Users\arcadeMode\Documents\Processing\ArcadeMenu\data\joyToKey\*.cfg (ConfigFileManager.cpp#43)
+2017/01/20 12:36:24.005 Info   Failed to find AppLink.dat (AppLink\AppLinkManager.cpp#32)
+2017/01/20 12:36:24.015 Info   TimerInit: Initializing timer with x1 speed mode (interval = 16 msec)
+2017/01/20 12:36:24.042 Info   Starting in a minimized mode (JoyToKey.cpp#34)
+2017/01/20 12:36:53.618 Info   Received WM_COPYDATA Message: whiskry (Main.cpp#448)
+2017/01/20 12:36:53.618 Info   Load config file "whiskry" (ConfigFileManager.cpp#111)
