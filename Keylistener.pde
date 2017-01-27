@@ -10,7 +10,7 @@ int timeIntervalFlag = 2000;
 public class JIntellitypeTester extends JFrame implements HotkeyListener {
 
   public void onHotKey(int aIdentifier) {
-    if (aIdentifier == 1) 
+    if (aIdentifier == 1 || aIdentifier == 2) 
     {
         loop();
       dataManager.killGame(theme.currentSelection);
@@ -147,7 +147,6 @@ void launchApplication()
         pid = kernel.GetProcessId(handle);
         appWindow = staticWindow.getProcessWindow(pid);
         println("Detected pid: " + pid);
-       // ensureGameIsOnTop();
       
       }
       catch (Throwable e)
@@ -166,6 +165,7 @@ void initGlobalKeyListener()
      // Initialize JIntellitype 
   JIntellitype.getInstance();
   JIntellitype.getInstance().registerHotKey(1, JIntellitype.MOD_ALT + JIntellitype.MOD_SHIFT, 'B');
+  JIntellitype.getInstance().registerHotKey(2, 0, 27); // registering ESC key as well to avoid killing the game process without changing gameIsRunning
   try {
     JIntellitype.getInstance().addHotKeyListener(mainFrame);
     println("JIntellitype initialized");
