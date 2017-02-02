@@ -12,21 +12,25 @@ public class JIntellitypeTester extends JFrame implements HotkeyListener {
   public void onHotKey(int aIdentifier) {
     if (aIdentifier == 1 || aIdentifier == 2) 
     {
+      if(gameIsRunning)
+        {
         loop();
-      dataManager.killGame(theme.currentSelection);
-      gameIsRunning = false;
-      println("just attempted to kill game");
-      
-       WinDef.HWND hwnd = User32.INSTANCE.FindWindow (null, "ArcadeMenu"); // window title
-      if (hwnd == null) {
-        System.out.println("CANT FIND MY WINDOW");
-      }
-      else
-      {
-        User32.INSTANCE.ShowWindow(hwnd, 9 );        // SW_RESTORE
-        User32.INSTANCE.SetForegroundWindow(hwnd);   // bring to front
-      }
-       
+        dataManager.killGame(theme.currentSelection);
+        gameIsRunning = false;
+        println("just attempted to kill game");
+        
+        WinDef.HWND hwnd = User32.INSTANCE.FindWindow (null, "ArcadeMenu"); // window title
+        if (hwnd == null) {
+          System.out.println("CANT FIND MY WINDOW");
+        }
+        else
+        {
+          User32.INSTANCE.ShowWindow(hwnd, 9 );        // SW_RESTORE
+          User32.INSTANCE.SetForegroundWindow(hwnd);   // bring to front
+        }
+      }  
+      else 
+        exit();
     }
   }
 }

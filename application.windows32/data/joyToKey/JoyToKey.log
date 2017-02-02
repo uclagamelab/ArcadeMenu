@@ -1,0 +1,35 @@
+2017/02/02 10:51:11.894 Info   Starting JoyToKey Ver5.5.1
+2017/02/02 10:51:11.894 Info   ExeFile=C:\Users\Stalgia\Documents\GitHub\ArcadeMenu\data\joyToKey\JoyToKey.exe
+2017/02/02 10:51:11.894 Info   ConfigDir=C:\Users\Stalgia\Documents\GitHub\ArcadeMenu\data\joyToKey\
+2017/02/02 10:51:11.894 Info   IniFile=C:\Users\Stalgia\Documents\GitHub\ArcadeMenu\data\joyToKey\JoyToKey.ini
+2017/02/02 10:51:11.894 Info   Windows Version = 6.1
+2017/02/02 10:51:11.894 Info   Loaded VistaAPI.dll (Utils\Utils.cpp#199)
+2017/02/02 10:51:11.895 Info   LicenseKey "" is not valid
+2017/02/02 10:51:11.999 Info   0 joysticks are detected (Joystick.cpp#110)
+2017/02/02 10:51:11.999 Info   ConfigDir=C:\Users\Stalgia\Documents\GitHub\ArcadeMenu\data\joyToKey\*.cfg (ConfigFileManager.cpp#43)
+2017/02/02 10:51:12.009 Info   Failed to find AppLink.dat (AppLink\AppLinkManager.cpp#32)
+2017/02/02 10:51:12.029 Info   TimerInit: Initializing timer with x1 speed mode (interval = 16 msec)
+2017/02/02 10:51:12.049 Info   Starting in a minimized mode (JoyToKey.cpp#34)
+2017/02/02 10:51:19.886 Info   Received WM_COPYDATA Message: burnandturn (Main.cpp#448)
+2017/02/02 10:51:19.886 Info   Load config file "burnandturn" (ConfigFileManager.cpp#111)
+2017/02/02 10:51:24.805 Info   Received WM_COPYDATA Message: menuselect (Main.cpp#448)
+2017/02/02 10:51:24.805 Info   Load config file "menuselect" (ConfigFileManager.cpp#111)
+2017/02/02 10:57:29.344 Info   Received WM_COPYDATA Message: menuselect (Main.cpp#448)
+2017/02/02 10:57:35.359 Info   Received WM_COPYDATA Message: burnandturn (Main.cpp#448)
+2017/02/02 10:57:35.359 Info   Load config file "burnandturn" (ConfigFileManager.cpp#111)
+2017/02/02 10:57:41.369 Info   Received WM_COPYDATA Message: menuselect (Main.cpp#448)
+2017/02/02 10:57:41.369 Info   Load config file "menuselect" (ConfigFileManager.cpp#111)
+2017/02/02 10:57:48.583 Info   Received WM_COPYDATA Message: whiskry (Main.cpp#448)
+2017/02/02 10:57:48.583 Info   Load config file "whiskry" (ConfigFileManager.cpp#111)
+2017/02/02 10:57:50.480 Info   Received WM_COPYDATA Message: menuselect (Main.cpp#448)
+2017/02/02 10:57:50.480 Info   Load config file "menuselect" (ConfigFileManager.cpp#111)
+2017/02/02 10:57:54.573 Info   Received WM_COPYDATA Message: cruise_control (Main.cpp#448)
+2017/02/02 10:57:54.573 Info   Load config file "cruise_control" (ConfigFileManager.cpp#111)
+2017/02/02 10:57:56.749 Info   Received WM_COPYDATA Message: menuselect (Main.cpp#448)
+2017/02/02 10:57:56.749 Info   Load config file "menuselect" (ConfigFileManager.cpp#111)
+2017/02/02 11:12:41.157 Info   Received WM_COPYDATA Message: menuselect (Main.cpp#448)
+2017/02/02 11:12:50.308 Info   Received WM_COPYDATA Message: burnandturn (Main.cpp#448)
+2017/02/02 11:12:50.308 Info   Load config file "burnandturn" (ConfigFileManager.cpp#111)
+2017/02/02 11:12:53.134 Info   Received WM_COPYDATA Message: menuselect (Main.cpp#448)
+2017/02/02 11:12:53.134 Info   Load config file "menuselect" (ConfigFileManager.cpp#111)
+2017/02/02 11:13:58.098 Info   Application terminated (Utils\LogFile.cpp#20)
