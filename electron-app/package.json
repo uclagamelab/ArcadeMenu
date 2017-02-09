@@ -1,43 +1,22 @@
 {
-  "name": "UCLA Arcade Menu",
-  "productName": "App",
-  "version": "0.0.0",
-  "description": "",
-  "license": "MIT",
-  "repository": "user/repo",
-  "author": {
-    "name": "",
-    "email": "",
-    "url": ""
-  },
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
   "scripts": {
-    "test": "xo",
-    "start": "electron .",
-    "build": "electron-packager . --out=dist --asar --overwrite --all"
+    "start": "electron ."
   },
-  "files": [
-    "index.js",
-    "index.html",
-    "index.css"
-  ],
+  "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
-    "electron-app",
-    "electron"
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
   ],
-  "dependencies": {
-    "electron-debug": "^1.0.0"
-  },
+  "author": "GitHub",
+  "license": "CC0-1.0",
   "devDependencies": {
-    "devtron": "^1.1.0",
-    "electron-packager": "^8.0.0",
-    "electron": "^1.0.1",
-    "xo": "^0.16.0"
-  },
-  "xo": {
-    "esnext": true,
-    "envs": [
-      "node",
-      "browser"
-    ]
+    "electron": "^1.4.1"
   }
 }
