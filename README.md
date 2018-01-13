@@ -54,3 +54,7 @@ todo: find link
 Also, it seems only to work with a 32 bit version of processing...
 I think I got it partially working on a 64bit, but it was an issue
 with JIntellitype. (maybe need to replace that jar/dll?)
+
+###Issues
+sometimes, when opening a game, the switcher will get stuck opening a game
+(It seems to be repeatedly opening/closing the game)
