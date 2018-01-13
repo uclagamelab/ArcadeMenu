@@ -43,3 +43,14 @@ The "instructions" folder holds a .png file that can be used as control instruct
 The "windows" folder is where all of the magic happens! This is where you put the executable for your game, along with any necessary data folders.
 
 Now you can add your own games to the arcade! :tada: :tada:
+
+###Extra Setup Notes
+You must add some files to the 'libraries' in your sketch directory
+Currently, those aren't included in the repo in the correct way, it's easiest to manually copy them from a working environment.
+todo: bundle those with the repo
+todo: figure out how much you can take away and still have it work.
+todo: find link
+
+Also, it seems only to work with a 32 bit version of processing...
+I think I got it partially working on a 64bit, but it was an issue
+with JIntellitype. (maybe need to replace that jar/dll?)

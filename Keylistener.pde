@@ -7,44 +7,61 @@ int lastTimeCheck;
 int timeIntervalFlag = 2000;
 
 
+
 public class JIntellitypeTester extends JFrame implements HotkeyListener {
 
-  public void onHotKey(int aIdentifier) {
-    if (aIdentifier == 1 || aIdentifier == 2) 
+public void onHotKey(int aIdentifier) 
+{
+  exitCurrentGame(aIdentifier);
+}
+
+public void exitCurrentGame()
+{
+  exitCurrentGame(1);
+}
+
+void exitCurrentGame(int aIdentifier)
+{
+    if (aIdentifier == 1) 
     {
-      if(gameIsRunning)
-        {
         loop();
-        dataManager.killGame(theme.currentSelection);
-        gameIsRunning = false;
-        println("just attempted to kill game");
-        
-        WinDef.HWND hwnd = User32.INSTANCE.FindWindow (null, "ArcadeMenu"); // window title
-        if (hwnd == null) {
-          System.out.println("CANT FIND MY WINDOW");
-        }
-        else
-        {
-          User32.INSTANCE.ShowWindow(hwnd, 9 );        // SW_RESTORE
-          User32.INSTANCE.SetForegroundWindow(hwnd);   // bring to front
-        }
-      }  
-      else 
-        exit();
+      dataManager.killGame(theme.currentSelection);
+      gameIsRunning = false;
+      println("just attempted to kill game");
+      
+       WinDef.HWND hwnd = User32.INSTANCE.FindWindow (null, "ArcadeMenu"); // window title
+      if (hwnd == null) {
+        System.out.println("CANT FIND MY WINDOW");
+      }
+      else
+      {
+        User32.INSTANCE.ShowWindow(hwnd, 9 );        // SW_RESTORE
+        User32.INSTANCE.SetForegroundWindow(hwnd);   // bring to front
+      }
+       
     }
   }
 }
 
 
+
+long countero = 0;
 void manageTopWindow()
 {
   if ( millis() > lastTimeCheck + timeIntervalFlag ) 
   {
+    System.out.println("checkin " + countero );
+    countero++;
+    
     if(gameIsRunning)
+    {
       ensureGameIsOnTop();
+    }
     else
+    {
       ensureMenuIsOnTop();
-      
+    }
+    
     lastTimeCheck += timeIntervalFlag;
   }
 }
@@ -55,8 +72,18 @@ void ensureGameIsOnTop()
   ellipse(10,10,20,20);
   println("ensuring game is on top");
   appWindow = staticWindow.getProcessWindow(pid);
-  println(appWindow.getTitle());
-  if(appWindow == null) println("appwindow is null");
+  
+  if(appWindow == null) 
+  {
+    println("Want to show game window, but game window is null");
+    // ==================
+    
+      loop();
+      dataManager.killGame(theme.currentSelection);
+      gameIsRunning = false;
+    
+    // ==================
+  }
   else if(appWindow.getProcessID() != staticWindow.getForegroundWindow().getProcessID())
   {
      println("NOT ON TOP! SETTING NOW" + appWindow.getProcessID());
@@ -151,6 +178,7 @@ void launchApplication()
         pid = kernel.GetProcessId(handle);
         appWindow = staticWindow.getProcessWindow(pid);
         println("Detected pid: " + pid);
+       // ensureGameIsOnTop();
       
       }
       catch (Throwable e)
@@ -166,11 +194,13 @@ void launchApplication()
 
 void initGlobalKeyListener()
 {
-     // Initialize JIntellitype 
+
+  try {
+    
+         // Initialize JIntellitype 
   JIntellitype.getInstance();
   JIntellitype.getInstance().registerHotKey(1, JIntellitype.MOD_ALT + JIntellitype.MOD_SHIFT, 'B');
-  JIntellitype.getInstance().registerHotKey(2, 0, 27); // registering ESC key as well to avoid killing the game process without changing gameIsRunning
-  try {
+    
     JIntellitype.getInstance().addHotKeyListener(mainFrame);
     println("JIntellitype initialized");
   } 

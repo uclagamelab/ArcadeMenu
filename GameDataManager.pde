@@ -23,6 +23,8 @@ class GameDataManager
     gamesFolder = new java.io.File(dataPath("games"));
 
     gamesDirectories = gamesFolder.listFiles (directoryFilter); 
+    
+    //TODO handle no games directory more robustly
 
     games = new ArrayList();
     for (File f : gamesDirectories)

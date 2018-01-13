@@ -29,17 +29,11 @@ PImage logo;
 
 GameDataManager dataManager;
 Themes theme;
-Movie noVid;
 
-void settings()
-{
-  //smaller for testing purposes
- // size(1080,720);
-  
-  fullScreen();
-}
 
+//boolean sketchFullScreen() { return false; }
 boolean gameIsRunning = false;
+
 
 void setup()
 {
@@ -48,12 +42,11 @@ void setup()
   lastTimeCheck = millis();
   readConfig();
 
-  noCursor();
+  //noCursor();
   size(displayWidth, displayHeight);
   savedTime = millis();
   
   logo = loadImage("logo.png");
- // noVid = new Movie(this, "default.mov");
   dataManager = new GameDataManager(this);
   theme = new Themes();
   

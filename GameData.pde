@@ -232,6 +232,7 @@ class GameData
     if(gameIsRunning)
     {
       try {
+        System.out.println("killing.....");
         loop();
           
           //kill game
@@ -242,6 +243,7 @@ class GameData
         Runtime.getRuntime().exec(joy2keyPath + " menuselect.cfg");
           gameIsRunning = false;
       } catch (Exception ex) {
+        System.out.print("???? : ");
          ex.printStackTrace();
       } 
      
